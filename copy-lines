@@ -2,10 +2,5 @@
 
 # copy-lines
 #   Copy a range of lines from a file.
-#   
-#   For example, you can copy lines 101 to 201 from source.txt 
-#   and save it to your clipboard (if you're on a Mac)
-#
-#   copy-lines 101,201 source.txt | pbcopy
 
-sed -n "$1p" $2
+sed -n "$1p" $2 | pbcopy
