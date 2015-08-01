@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# git-remove-deleted
+#    Removes all git files that have been deleted. Does not
+# prompt for confirmation.
+
+git diff --diff-filter=D --name-only -z | xargs -0 -I {} git rm {}
